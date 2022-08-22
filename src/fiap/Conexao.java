@@ -1,6 +1,6 @@
 /* Daniel Henrique Alcantara Oliveira Martins  RM: 94615
- * Luís Felipe Garcia Menezes  RM: 94051
- * Pedro Victor Saraiva de Sá  RM: 93627
+* Luís Felipe Garcia Menezes  RM: 94051
+* Pedro Victor Saraiva de Sá  RM: 93627
 */
 
 package fiap;
