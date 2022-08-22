@@ -2,12 +2,12 @@
 
 # 1. Crie a tabela Filmes em sua conexão oracle conforme indicado abaixo (1 ponto):
 
-create table filmes (
-  codigo varchar(5) not null primary key,
-  titulo varchar(35),
-  genero varchar(8),
-  produtora varchar(15)
-)
+    create table filmes (
+      codigo varchar(5) not null primary key,
+      titulo varchar(35),
+      genero varchar(8),
+      produtora varchar(15)
+    )
 
 # 2. Desenvolva um projeto em Java com Manipulação à Banco de Dados com a tabela da questão anterior.
 Siga modelo UML para desenvolvimento das classes necessárias (4 pontos):
