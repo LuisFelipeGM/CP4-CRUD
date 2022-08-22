@@ -1,6 +1,6 @@
 /* Daniel Henrique Alcantara Oliveira Martins  RM: 94615
-* LuÃ­s Felipe Garcia Menezes  RM: 94051
-* Pedro Victor Saraiva de SÃ¡  RM: 93627
+* Luís Felipe Garcia Menezes  RM: 94051
+* Pedro Victor Saraiva de Sá  RM: 93627
 */
 
 package fiap;
@@ -12,6 +12,10 @@ import java.util.*;
 public class FilmeDAO {
 	
 	private Connection con;
+	
+	public FilmeDAO(Connection con) {
+		this.con = con;
+	}
 
 	public Connection getCon() {
 		return con;
@@ -23,7 +27,7 @@ public class FilmeDAO {
 	
 	
 	public String inserir(Filme filme) {
-		String sql = "insert into filme(codigo, titulo, genero, produtora) values (?, ?, ?, ?)";
+		String sql = "insert into filmes (codigo, titulo, genero, produtora) values (?, ?, ?, ?)";
 		try {
 			PreparedStatement ps = getCon().prepareStatement(sql);
 			ps.setString(1, filme.getCodigo());
@@ -41,7 +45,7 @@ public class FilmeDAO {
 	}
 	
 	public String alterar(Filme filme) {
-		String sql = "update filme set titulo = ?, genero = ?, produtora = ? where codigo = ?";
+		String sql = "update filmes set titulo = ?, genero = ?, produtora = ? where codigo = ?";
 		try {
 			PreparedStatement ps = getCon().prepareStatement(sql);
 			ps.setString(1, filme.getTitulo());
@@ -60,7 +64,7 @@ public class FilmeDAO {
 	}
 	
 	public String excluir(Filme filme) {
-		String sql = "delete from filme where codigo = ?";
+		String sql = "delete from filmes where codigo = ?";
 		try {
 			PreparedStatement ps = getCon().prepareStatement(sql);
 			ps.setString(1, filme.getCodigo());
@@ -75,7 +79,7 @@ public class FilmeDAO {
 	}
 	
 	public ArrayList<Filme> listarTodos(){
-		String sql = "select * from filme";
+		String sql = "select * from filmes";
 		ArrayList<Filme> listaFilme = new ArrayList<Filme>();
 		
 		try {
