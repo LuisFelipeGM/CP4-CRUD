@@ -1,6 +1,6 @@
 /* Daniel Henrique Alcantara Oliveira Martins  RM: 94615
-* LuÌs Felipe Garcia Menezes  RM: 94051
-* Pedro Victor Saraiva de S·  RM: 93627
+* Lu√≠s Felipe Garcia Menezes  RM: 94051
+* Pedro Victor Saraiva de S√°  RM: 93627
 */
 
 package fiap;
@@ -17,7 +17,7 @@ public class Teste {
 
 		while (escolha.equalsIgnoreCase("sim")) {
 			try {
-				opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha: \n(1) Inserir \n(2) Alterar \n(3) Excluir"));
+				opcao = Integer.parseInt(JOptionPane.showInputDialog("Escolha: \n(1) Inserir \n(2) Alterar \n(3) Excluir \n(4) Lista de Filmes"));
 				switch (opcao) {
 				case 1:
 					inserirFilme();
@@ -31,6 +31,9 @@ public class Teste {
 					excluirFilme();
 					listaFilme();
 					break;
+				case 4:
+					listaFilme();
+					break;
 				default:
 					System.out.println("Escolha incorreta de classe!");
 				}
@@ -38,7 +41,7 @@ public class Teste {
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
-			escolha = JOptionPane.showInputDialog("Deseja continuar? (sim ou n„o)");
+			escolha = JOptionPane.showInputDialog("Deseja continuar? (sim ou n√£o)");
 		}	
 
 	}
